@@ -2,7 +2,10 @@ package kp.repository;
 
 import kp.domain.RespondentReply;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+import java.util.List;
 
 /**
  * The repository interface for managing {@link RespondentReply} entities.
@@ -10,4 +13,11 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  */
 @RepositoryRestResource
 public interface RespondentReplyRepository extends JpaRepository<RespondentReply, Long> {
+    /**
+     * Finds replies by respondent signature containing username.
+     *
+     * @param username the username
+     * @return the respondent reply
+     */
+    List<RespondentReply> findByRespondentSignatureContaining(@Param("username") String username);
 }

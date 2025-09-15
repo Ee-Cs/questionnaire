@@ -1,6 +1,5 @@
 package kp.repository;
 
-import jakarta.transaction.Transactional;
 import kp.domain.Inbox;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
@@ -22,6 +21,31 @@ import java.util.List;
 public interface InboxRepository extends JpaRepository<Inbox, Long> {
 
     /**
+     * Retrieves a list of {@link Inbox} entities by the topic.
+     *
+     * @param word the word in the topic of the {@link Inbox}
+     * @return a list of {@link Inbox} entities
+     */
+    List<Inbox> findByTopicContaining(@Param("word") String word);
+
+    /**
+     * Counts the number of {@link Inbox} entities by the topic.
+     *
+     * @param word the word in the topic of the {@link Inbox}
+     * @return the number of {@link Inbox} entities
+     */
+    long countByTopicContaining(@Param("word") String word);
+
+
+    /**
+     * Counts the number of {@link Inbox} entities by the anonymous submission allowed flag.
+     *
+     * @param anonymousSubmissionAllowed the anonymous submission allowed flag
+     * @return the number of {@link Inbox} entities
+     */
+    long countByAnonymousSubmissionAllowed(@Param("anonymousSubmissionAllowed") boolean anonymousSubmissionAllowed);
+
+    /**
      * Retrieves a {@link Slice} of {@link Inbox} entities ordered by topic.
      *
      * @param pageable the pagination information
@@ -29,19 +53,4 @@ public interface InboxRepository extends JpaRepository<Inbox, Long> {
      */
     Slice<Inbox> findAllByOrderByTopic(Pageable pageable);
 
-    /**
-     * Retrieves a list of {@link Inbox} entities by topic.
-     *
-     * @param topic the topic of the {@link Inbox}
-     * @return a list of {@link Inbox} entities
-     */
-    List<Inbox> findByTopic(@Param("topic") String topic);
-
-    /**
-     * Counts the number of {@link Inbox} entities by topic.
-     *
-     * @param topic the topic of the {@link Inbox}
-     * @return the number of {@link Inbox} entities
-     */
-    long countByTopic(@Param("topic") String topic);
 }

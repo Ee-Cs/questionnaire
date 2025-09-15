@@ -82,6 +82,41 @@ table td {
     </td><td class="col-2">
         <a href="http://localhost:8080/inboxes/search">/inboxes/search</a>
     </td></tr>
+    <tr><td class="col-1">
+        Get inboxes by topic with word 'team'
+    </td><td class="col-2">
+        <a href="http://localhost:8080/inboxes/search/findByTopicContaining?word=team">
+            /inboxes/search/findByTopicContaining?word=team</a>
+    </td></tr>
+    <tr><td class="col-1">
+        Count inboxes by topic with word 'team'
+    </td><td class="col-2">
+        <a href="http://localhost:8080/inboxes/search/countByTopicContaining?word=team">
+            /inboxes/search/countByTopicContaining?word=team</a>
+    </td></tr>
+    <tr><td class="col-1">
+        Count inboxes with anonymous submission allowed
+    </td><td class="col-2">
+        <a href="http://localhost:8080/inboxes/search/countByAnonymousSubmissionAllowed?anonymousSubmissionAllowed=true">
+            /inboxes/search/countByAnonymousSubmissionAllowed?anonymousSubmissionAllowed=true</a>
+    </td></tr>
+    <tr><td class="col-1">
+        Endpoints from <b>RespondentReplyRepository</b> interface
+    </td><td class="col-2">
+        <a href="http://localhost:8080/respondentReplies/search">/respondentReplies/search</a>
+    </td></tr>
+    <tr><td class="col-1">
+        Get the replies from the respondent 'bob'
+    </td><td class="col-2">
+        <a href="http://localhost:8080/respondentReplies/search/findByRespondentSignatureContaining?username=bob">
+            /respondentReplies/search/findByRespondentSignatureContaining?username=bob</a>
+    </td></tr>
+    <tr><td class="col-1">
+        Get the replies from the respondent 'charlie'
+    </td><td class="col-2">
+        <a href="http://localhost:8080/respondentReplies/search/findByRespondentSignatureContaining?username=charlie">
+            /respondentReplies/search/findByRespondentSignatureContaining?username=charlie</a>
+    </td></tr>
 </table>
 <hr>
 
