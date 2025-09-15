@@ -43,12 +43,12 @@ table td {
         <a href="http://localhost:8080/questionnaires">/questionnaires</a>
     </td></tr>
     <tr><td class="col-1">
-        Get <b>Questionnaire</b> by id
+        Get the <b>Questionnaire</b> by id
     </td><td class="col-2">
         <a href="http://localhost:8080/questionnaires/1">/questionnaires/1</a>
     </td></tr>
     <tr><td class="col-1">
-        Get <b>Inbox</b> in <b>Questionnaire</b> by id
+        Get the <b>Inbox</b> in <b>Questionnaire</b> by id
     </td><td class="col-2">
         <a href="http://localhost:8080/questionnaires/1/inboxes/11">/questionnaires/1/inboxes/11</a>
     </td></tr>
@@ -63,7 +63,7 @@ table td {
         <a href="http://localhost:8080/inboxes">/inboxes</a>
     </td></tr>
     <tr><td class="col-1">
-        Get <b>Inbox</b> by id
+        Get the <b>Inbox</b> by id
     </td><td class="col-2">
         <a href="http://localhost:8080/inboxes/11">/inboxes/11</a>
     </td></tr>
@@ -73,32 +73,38 @@ table td {
         <a href="http://localhost:8080/respondentReplies">/respondentReplies</a>
     </td></tr>
     <tr><td class="col-1">
-        Get <b>Respondent Reply</b> by id
+        Get the <b>Respondent Reply</b> by id
     </td><td class="col-2">
         <a href="http://localhost:8080/respondentReplies/111">/respondentReplies/111</a>
     </td></tr>
     <tr><td class="col-1">
-        Endpoints from <b>InboxRepository</b> interface
+        Endpoints from the <b>InboxRepository</b> interface
     </td><td class="col-2">
         <a href="http://localhost:8080/inboxes/search">/inboxes/search</a>
     </td></tr>
     <tr><td class="col-1">
-        Get inboxes by topic with word 'team'
+        Get the <b>Inboxes</b> by topic with word 'team'
     </td><td class="col-2">
         <a href="http://localhost:8080/inboxes/search/findByTopicContaining?word=team">
             /inboxes/search/findByTopicContaining?word=team</a>
     </td></tr>
     <tr><td class="col-1">
-        Count inboxes by topic with word 'team'
+        Count the <b>Inboxes</b> by topic with word 'team'
     </td><td class="col-2">
         <a href="http://localhost:8080/inboxes/search/countByTopicContaining?word=team">
             /inboxes/search/countByTopicContaining?word=team</a>
     </td></tr>
     <tr><td class="col-1">
-        Count inboxes with anonymous submission allowed
+        Count the <b>Inboxes</b> with anonymous submission allowed
     </td><td class="col-2">
         <a href="http://localhost:8080/inboxes/search/countByAnonymousSubmissionAllowed?anonymousSubmissionAllowed=true">
             /inboxes/search/countByAnonymousSubmissionAllowed?anonymousSubmissionAllowed=true</a>
+    </td></tr>
+    <tr><td class="col-1">
+        Get the expired <b>Inboxes</b>
+    </td><td class="col-2">
+        <a href="http://localhost:8080/inboxes/search/findAllWithExpirationDateBeforeNow">
+            /inboxes/search/findAllWithExpirationDateBeforeNow</a>
     </td></tr>
     <tr><td class="col-1">
         Endpoints from <b>RespondentReplyRepository</b> interface
@@ -106,13 +112,13 @@ table td {
         <a href="http://localhost:8080/respondentReplies/search">/respondentReplies/search</a>
     </td></tr>
     <tr><td class="col-1">
-        Get the replies from the respondent 'bob'
+        Get the <b>Respondent Replies</b> from respondent 'bob'
     </td><td class="col-2">
         <a href="http://localhost:8080/respondentReplies/search/findByRespondentSignatureContaining?username=bob">
             /respondentReplies/search/findByRespondentSignatureContaining?username=bob</a>
     </td></tr>
     <tr><td class="col-1">
-        Get the replies from the respondent 'charlie'
+        Get the <b>Respondent Replies</b> from respondent 'charlie'
     </td><td class="col-2">
         <a href="http://localhost:8080/respondentReplies/search/findByRespondentSignatureContaining?username=charlie">
             /respondentReplies/search/findByRespondentSignatureContaining?username=charlie</a>

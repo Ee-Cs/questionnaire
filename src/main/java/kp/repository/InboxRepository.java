@@ -4,6 +4,7 @@ import kp.domain.Inbox;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
@@ -19,6 +20,13 @@ import java.util.List;
  */
 @RepositoryRestResource
 public interface InboxRepository extends JpaRepository<Inbox, Long> {
+    /**
+     * Retrieves a list of expired {@link Inbox} entities (where expirationDate is before now).
+     *
+     * @return a list of {@link Inbox} entities
+     */
+    @Query("SELECT inb FROM Inbox inb WHERE inb.expirationDate < CURRENT_TIMESTAMP")
+    List<Inbox> findAllWithExpirationDateBeforeNow();
 
     /**
      * Retrieves a list of {@link Inbox} entities by the topic.
