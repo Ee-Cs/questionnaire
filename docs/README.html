@@ -14,5 +14,7 @@
     <a href="https://github.com/Ee-Cs/questionnaire/blob/main/docs/mermaid/classDiagram.md"><b>class diagram</b></a>.</p>
 <p>The web page
     <a href="https://github.com/Ee-Cs/questionnaire/blob/main/docs/images/ScreenshotWebPage.jpg"><b>screenshot</b></a>.
+<p>The CURL results
+    <a href="https://github.com/Ee-Cs/questionnaire/blob/main/docs/images/ScreenshotCURL.jpg"><b>screenshot</b></a>.
 </body>
 </html>
