@@ -1,0 +1,35 @@
+Goal:
+ Allow people to give and receive feedback
+ in a secure and relatively fuss-free (no registration needed) way.
+-----------------------------------------------------------
+Use cases:
+1. Users can create several Inboxes. Each Inbox has:
+    1.1 A leading question, topic (e.g. "What do you like about me?")
+    1.2. A unique, non-sequential ID
+    1.3. Inbox Owner information in the form of a signature
+    1.4. An expiration date after which the Inbox cannot be responded to
+    1.5. A flag allowing for anonymous submissions;
+         if the flag is not set, only signed messages should be accepted
+2. User can view the Inbox information
+   (topic, owner signature, expiration date), but not the replies
+3. User can reply to an Inbox. Each message has:
+    3.1. A body
+    3.2. A timestamp
+    3.3. A signature (or no signature if the message is anonymous)
+4. Inbox Owner can read Inbox replies after providing
+   credentials matching Inbox's signature.
+-----------------------------------------------------------
+Signatures are strings generated according to the following scheme:
+    <username> + <separator> + <cryptographic hash of username + secret + salt>
+
+Such signatures are sometimes called "tripcodes"
+-----------------------------------------------------------
+TODOs:
+1. Implement a domain model based on the above requirements. Your domain model
+   should aim for completeness and purity unless you see no other way of achieving
+   the stated business goals. Think carefully about how you will expose your domain
+   model to the rest of the application
+2. Define interfaces (ports) for any required infrastructural services and
+   provide simple implementations (adapters) for these services
+3. Implement a RESTful API utilizing your domain model
+-----------------------------------------------------------

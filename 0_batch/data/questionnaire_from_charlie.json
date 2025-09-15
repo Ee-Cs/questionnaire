@@ -1,0 +1,60 @@
+{
+  "id": 1,
+  "name": "The questionnaire",
+  "username": "charlie",
+  "secret": "secret",
+  "inboxes": [
+    {
+      "id": 11,
+      "topic": "Are you the person from the team 'BOB'?",
+      "expirationDate": "2026-01-01T00:00:00",
+      "anonymousSubmissionAllowed": false,
+      "respondentReplies": [
+        {
+          "id": 112,
+          "response": "No, I am not from the team 'BOB'.",
+          "replyDate": "2025-01-01T00:00:00"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "topic": "Are you the person from the team 'CHARLIE'?",
+      "expirationDate": "2026-01-01T00:00:00",
+      "anonymousSubmissionAllowed": false,
+      "respondentReplies": [
+        {
+          "id": 122,
+          "response": "Yes, I am from the team 'CHARLIE'.",
+          "replyDate": "2025-01-01T00:00:00"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "topic": "Do you meet the 2024 deadline?",
+      "expirationDate": "2024-01-01T00:00:00",
+      "anonymousSubmissionAllowed": false,
+      "respondentReplies": [
+        {
+          "id": 132,
+          "response": "But the 2024 deadline has passed.",
+          "replyDate": "2025-01-01T00:00:00"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "topic": "What is the network of your credit card?",
+      "expirationDate": "2026-01-01T00:00:00",
+      "anonymousSubmissionAllowed": true,
+      "respondentReplies": [
+        {
+          "id": 142,
+          "response": "It is Visa.",
+          "replyDate": "2025-01-01T00:00:00"
+        }
+      ]
+    }
+  ]
+}

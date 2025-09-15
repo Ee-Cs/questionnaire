@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<body>
+<h2 id="contents">The Recruitment Task README Contents</h2>
+<h3 id="top">Research the <a href="https://spring.io/projects/spring-data-rest">Spring Data REST</a> application with
+    the <a href="https://www.h2database.com/">H2 database</a></h3>
+<p>
+    The business requirements
+    <a href="https://github.com/Ee-Cs/questionnaire/blob/main/docs/BusinessRequirements.txt"><b>notes</b></a>.</p>
+<p>The business logic
+    <a href="https://github.com/Ee-Cs/questionnaire/blob/main/docs/mermaid/flowchart.md"><b>diagrams</b></a>.</p>
+<p>The model
+    <a href="https://github.com/Ee-Cs/questionnaire/blob/main/docs/mermaid/classDiagram.md"><b>class diagram</b></a>.</p>
+<p>The web page
+    <a href="https://github.com/Ee-Cs/questionnaire/blob/main/docs/images/ScreenshotWebPage.jpg"><b>screenshot</b></a>.
+</body>
+</html>
